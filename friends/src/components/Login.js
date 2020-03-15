@@ -21,7 +21,7 @@ const [credentials, setCredentials] = useState({
           console.log(response);
         })
         .catch(err=>{
-          err, 'error posting to the login api'
+          console.log(err, 'error posting to the login api');
         })
         
 
