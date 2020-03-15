@@ -9,8 +9,8 @@ const [credentials, setCredentials] = useState({
 
 // form functions
     const handleChanges = event => {
-
-    }
+      setCredentials({...credentials, [event.target.name]: event.target.value});
+    };
 
     const handleSubmit = event => {
         event.preventDefault();
