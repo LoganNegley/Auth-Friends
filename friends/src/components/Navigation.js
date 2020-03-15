@@ -14,7 +14,7 @@ function Navigation() {
                 <Link to='/login'>Login</Link>
             </li>
             <li>
-                <Link to='/friends-list'>Friends List</Link>
+                <Link to='/protected'>Friends List</Link>
             </li>
         </ul>
         <Switch>
