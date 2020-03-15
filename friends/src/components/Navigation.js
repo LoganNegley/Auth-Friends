@@ -3,7 +3,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 
 import Login from '../components/Login';
 import FriendsList from '../components/FriendsList';
-import PrivatRoute from '../components/PrivateRoute';
+import PrivateRoute from '../components/PrivateRoute';
 
 function Navigation() {
 
@@ -19,7 +19,8 @@ function Navigation() {
         </ul>
         <Switch>
             <Route path='/login' component={Login}/>
-            <Route path='/friends-list' component={FriendsList}/>
+            <Route component={Login}/>
+            <PrivateRoute path='/protected' component={FriendsList}/>
         </Switch>
 
     </div>

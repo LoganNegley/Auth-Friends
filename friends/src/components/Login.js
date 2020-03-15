@@ -20,7 +20,7 @@ const [credentials, setCredentials] = useState({
         .then(res =>
         window.localStorage.setItem('token', res.data.payload)
         // navigate user to /protected component
-        props.history.push('/protected');
+        // props.history.push('/protected');
         )
         .catch(err =>
           console.log(err, 'error posting to the login api'))
