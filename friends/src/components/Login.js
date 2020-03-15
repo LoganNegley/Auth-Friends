@@ -17,12 +17,10 @@ const [credentials, setCredentials] = useState({
     const handleSubmit = event => {
         event.preventDefault();
         axios.post('http://localhost:5000/api/login', credentials)
-        .then(response => {
-          console.log(response);
-        })
-        .catch(err=>{
-          console.log(err, 'error posting to the login api');
-        })
+        .then(response =>
+          console.log(response))
+        .catch(err =>
+          console.log(err, 'error posting to the login api'))
         
 
     }
