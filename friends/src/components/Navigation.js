@@ -14,12 +14,12 @@ function Navigation() {
                 <Link to='/login'>Login</Link>
             </li>
             <li>
-                <Link to='/protected'>Friends List</Link>
+                <Link to='/friendslist'>Friends List</Link>
             </li>
         </ul>
         <Switch>
             <Route path='/login' component={Login}/>
-            <Route component={Login}/>
+            {/* <Route component={Login}/> */}
             <PrivateRoute exact path='/friendslist' component={FriendsList}/>
         </Switch>
 
