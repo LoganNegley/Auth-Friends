@@ -20,7 +20,7 @@ function Navigation() {
         <Switch>
             <Route path='/login' component={Login}/>
             <Route component={Login}/>
-            <PrivateRoute path='/protected' component={FriendsList}/>
+            <PrivateRoute exact path='/protected' component={FriendsList}/>
         </Switch>
 
     </div>
