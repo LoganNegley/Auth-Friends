@@ -1,6 +1,10 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 
+import Login from '../components/Login';
+import FriendsList from '../components/FriendsList';
+import PrivatRoute from '../components/PrivateRoute';
+
 function Navigation() {
 
   return (
@@ -14,8 +18,8 @@ function Navigation() {
             </li>
         </ul>
         <Switch>
-            <Route/>
-            <Route/>
+            <Route path='/login' component={Login}/>
+            <Route path='/friends-list' component={FriendsList}/>
         </Switch>
 
     </div>
