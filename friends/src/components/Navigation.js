@@ -4,7 +4,9 @@ function Navigation() {
 
   return (
     <div className='navbar'>
-
+        <ul>
+            <li>Login</li>
+        </ul>
     </div>
   );
 }

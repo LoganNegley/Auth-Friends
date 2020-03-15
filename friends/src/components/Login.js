@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import axios from 'axios';
+
 
 function Login() {
 const [credentials, setCredentials] = useState({
@@ -14,6 +16,15 @@ const [credentials, setCredentials] = useState({
 
     const handleSubmit = event => {
         event.preventDefault();
+        axios.post('/api/login', credentials)
+        .then(response => {
+          console.log(response);
+        })
+        .catch(err=>{
+          err, 'error posting to the login api'
+        })
+        
+
     }
 
 
