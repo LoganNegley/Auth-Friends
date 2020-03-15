@@ -17,8 +17,7 @@ const [credentials, setCredentials] = useState({
     const handleSubmit = event => {
         event.preventDefault();
         axios.post('http://localhost:5000/api/login', credentials)
-        .then(response =>
-          console.log(response))
+        .then(res => console.log(res))
         .catch(err =>
           console.log(err, 'error posting to the login api'))
         
@@ -28,12 +27,13 @@ const [credentials, setCredentials] = useState({
 
   return (
     <div className='login'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
           name='username'
           placeholder='Username'
           value={credentials.username}
+          onChange={handleChanges}
         />
 
         <input
@@ -41,6 +41,7 @@ const [credentials, setCredentials] = useState({
           name='password'
           placeholder='Password'
           value={credentials.password}
+          onChange={handleChanges}
         />
         <button type='submit'>Login</button>
       </form>
