@@ -1,14 +1,23 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 
 function Navigation() {
 
   return (
     <div className='navbar'>
         <ul>
-            <li>Login</li>
-            <li>Friends List</li>
+            <li>
+                <Link to='/login'>Login</Link>
+            </li>
+            <li>
+                <Link to='/friends-list'>Friends List</Link>
+            </li>
         </ul>
+        <Switch>
+            <Route/>
+            <Route/>
+        </Switch>
+
     </div>
   );
 }
