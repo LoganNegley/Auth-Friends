@@ -21,9 +21,10 @@ function FriendsList() {
   return (
     <div className="FriendsList">
       <h1>List of Friends</h1>
-
+      <button>Add A New Friend</button>
       {friends.map(friend => (
           <h3>{friend.name}</h3>
+          <p>{friend.email}</p>
       ))}
     </div>
   );
