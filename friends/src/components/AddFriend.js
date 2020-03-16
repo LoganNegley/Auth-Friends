@@ -4,7 +4,7 @@ import {axiosWithAuth} from '../axiosAuth.js/axiosWithAuth';
 
 function AddFriend() {
     const [newFriend, setNewFriend] = useState({
-    id: date.new(),
+    id: Date.now(),
     name: '',
     age: '',
     email: '',

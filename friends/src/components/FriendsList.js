@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../axiosAuth.js/axiosWithAuth';
 import FriendsCard from '../components/FriendsCard';
+import AddFriend from '../components/AddFriend';
 
 
 function FriendsList() {
@@ -16,18 +17,15 @@ function FriendsList() {
         .catch(err => {
              console.log(err, 'error getting list of friends from api'
             )})
-  }, []);
+  }, [friends]);
 
 
   return (
     <div className="FriendsList">
       <h1>List of Friends</h1>
-      <button>Add A New Friend</button>
-      {/* {friends.map(friend => (
-          <h3>{friend.name}</h3>
-          <p>{friend.email}</p>
-      ))} */}
+      {/* <button onClick={AddFriend}>Add A New Friend</button> */}
       <FriendsCard friends={friends}/>
+      <AddFriend/>
     </div>
   );
 }
