@@ -11,12 +11,14 @@ function AddFriend() {
     });
 
     const handleChanges= event => {
-
+        setNewFriend({...newFriend, [event.target.name] : event.target.value})
     };
 
     const handleSubmit = event => {
         event.preventDefault();
-        
+        axiosWithAuth()
+        .post('http://localhost:5000/api/friends', newFriend)
+        .then(res => console.log(res))
     };
 
 
