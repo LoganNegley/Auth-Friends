@@ -10,6 +10,15 @@ function AddFriend() {
     email: '',
     });
 
+    const handleChanges= event => {
+
+    };
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        
+    };
+
 
   return (
     <div className="add-friend-form">
