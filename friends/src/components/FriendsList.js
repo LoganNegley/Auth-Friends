@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../axiosAuth.js/axiosWithAuth';
+import FriendsCard from '../components/FriendsCard';
 
 
 function FriendsList() {
@@ -22,10 +23,11 @@ function FriendsList() {
     <div className="FriendsList">
       <h1>List of Friends</h1>
       <button>Add A New Friend</button>
-      {friends.map(friend => (
+      {/* {friends.map(friend => (
           <h3>{friend.name}</h3>
           <p>{friend.email}</p>
-      ))}
+      ))} */}
+      <FriendsCard friends={friends}/>
     </div>
   );
 }
