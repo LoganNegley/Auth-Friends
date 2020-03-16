@@ -4,9 +4,13 @@ import axios from 'axios';
 
 function FriendsList() {
     const [friends, setFriends] = useState([])
-
+    const token= window.localStorage.getItem('token');
       useEffect(() => {
-        axios.get('http://localhost:5000/api/friends')
+        axios.get('http://localhost:5000/api/friends', {
+            header:{
+                authorization:token
+            }
+        })
         .then(res => console.log(res))
         .catch(err => console.log(err, 'error getting list of friends from api'))
   });
