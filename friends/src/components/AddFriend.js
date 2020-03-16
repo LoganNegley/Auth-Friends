@@ -19,6 +19,12 @@ function AddFriend() {
         axiosWithAuth()
         .post('http://localhost:5000/api/friends', newFriend)
         .then(res => console.log(res))
+        setNewFriend({
+            id:Date.now(),
+            name:'',
+            age:'',
+            email:'',
+        })
     };
 
 
