@@ -24,27 +24,27 @@ function AddFriend() {
 
   return (
     <div className="add-friend-form">
-        <form>
+        <form onSubmit= {handleSubmit}>
             <input
                 type='text'
                 name='name'
                 placeholder='Name'
                 value={newFriend.name}
-                // onChange={}
+                onChange={handleChanges}
             />
             <input
                 type='text'
                 name='age'
                 placeholder='Age'
                 value={newFriend.age}
-                // onChange={}
+                onChange={handleChanges}
             />
             <input
                 type='text'
                 name='email'
                 placeholder='Email'
                 value={newFriend.email}
-                // onChange={}
+                onChange={handleChanges}
             />
             <button type='submit'>Add A New Friend</button>
         </form>
