@@ -1,20 +1,20 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import {axiosWithAuth} from '../axiosAuth.js/axiosWithAuth';
 
 
 function FriendsList() {
     const [friends, setFriends] = useState([])
   
       useEffect(() => {
-        const token= window.localStorage.getItem('token');
-        axios.get('http://localhost:5000/api/friends', {
-            header:{
-                authorization:token
-            }
-        })
-        .then(res => console.log(res))
-        .catch(err => console.log(err, 'error getting list of friends from api'))
-  });
+        axiosWithAuth()
+        .get('http://localhost:5000/api/friends')
+        .then(res => { 
+            console.log(res)}
+        )
+        .catch(err => {
+             console.log(err, 'error getting list of friends from api'
+            )})
+  }, []);
 
 
   return (
