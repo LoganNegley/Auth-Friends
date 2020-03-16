@@ -9,8 +9,9 @@ function FriendsList() {
         axiosWithAuth()
         .get('http://localhost:5000/api/friends')
         .then(res => { 
-            console.log(res)}
-        )
+            // res.data
+            setFriends(res.data)
+        })
         .catch(err => {
              console.log(err, 'error getting list of friends from api'
             )})
@@ -20,6 +21,10 @@ function FriendsList() {
   return (
     <div className="FriendsList">
       <h1>List of Friends</h1>
+
+      {friends.map(friend => (
+          <h3>{friend.name}</h3>
+      ))}
     </div>
   );
 }
