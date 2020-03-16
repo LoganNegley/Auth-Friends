@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {axiosWithAuth} from '../axiosAuth.js/axiosWithAuth';
 import FriendsCard from '../components/FriendsCard';
 import AddFriend from '../components/AddFriend';
+import {Link, Route, Switch} from 'react-router-dom';
 
 
 function FriendsList() {
@@ -23,9 +24,14 @@ function FriendsList() {
   return (
     <div className="FriendsList">
       <h1>List of Friends</h1>
-      {/* <button onClick={AddFriend}>Add A New Friend</button> */}
+      <Link to='/addfriend'>
+      <button type='button'>Add A New Friend</button>
+      </Link>
       <FriendsCard friends={friends}/>
-      <AddFriend/>
+      {/* <AddFriend/> */}
+      <Switch>
+      <Route path='/addfriend' component={AddFriend}/>
+      </Switch>
     </div>
   );
 }
