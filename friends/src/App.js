@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Login from '../src/components/Login';
 import Navigation from '../src/components/Navigation';
 
