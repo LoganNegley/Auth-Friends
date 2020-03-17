@@ -24,8 +24,14 @@ function FriendsList() {
   return (
     <div className="FriendsList">
       <h1>List of Friends</h1>
-      <AddFriend/>
+      <Link to='/addfriend'>
+      <button type='button'>Add A New Friend</button>
+      </Link>
       <FriendsCard friends={friends}/>
+      {/* <AddFriend/> */}
+      <Switch>
+      <Route path='/addfriend' component={AddFriend}/>
+      </Switch>
     </div>
   );
 }
